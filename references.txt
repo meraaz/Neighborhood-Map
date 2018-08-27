@@ -16,14 +16,20 @@ http://knockoutjs.com/documentation/click-binding.html
 
 Google Maps Documentation :
 
-https://developer.foursquare.com/docs/api/venues/like
+// Google map events
 
 https://developers.google.com/maps/documentation/javascript/events
 
 Foursquare Documentation :
+
 // followed to create access token to like venues
 https://developer.foursquare.com/docs/api/configuration/authentication
 
+// List the main venues categories
+https://developer.foursquare.com/docs/api/venues/categories
+
+// List venues in specific category
 https://developer.foursquare.com/docs/api/venues/search
 
-https://developer.foursquare.com/docs/api/venues/categories
+// Like a venue API
+https://developer.foursquare.com/docs/api/venues/like

@@ -209,7 +209,9 @@ let category = function (data) {
     };
 };
 
-
+function startApp() {
+  ko.applyBindings(new CategoriesViewModel());
+  
+}
 $(document).ready(function () {
-    ko.applyBindings(new CategoriesViewModel());
 });
