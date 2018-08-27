@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 	//set your google maps parameters
 	let latitude = 30.0594838,
 		longitude = 31.2234448,
-		map_zoom = 16;
+		map_zoom = 10;
 
 	//define the basic color of your map, plus a value for saturation and brightness
 	let	main_color = '#2d313f',
@@ -12,15 +12,15 @@ jQuery(document).ready(function($){
 		brightness_value= 5;
 
 	//we define here the style of the map
-	let style= [ 
+	let style= [
 		{
 			//set saturation for the labels on the map
 			elementType: "labels",
 			stylers: [
 				{saturation: saturation_value}
 			]
-		},  
-	    {	//poi stands for point of interest - don't show these lables on the map 
+		},
+	    {	//poi stands for point of interest - don't show these lables on the map
 			featureType: "poi",
 			elementType: "labels",
 			stylers: [
@@ -34,22 +34,22 @@ jQuery(document).ready(function($){
 	        stylers: [
 	            {visibility: "off"}
 	        ]
-	    }, 
-		{ 	
+	    },
+		{
 			//don't show local road lables on the map
-			featureType: "road.local", 
-			elementType: "labels.icon", 
-			stylers: [
-				{visibility: "off"} 
-			] 
-		},
-		{ 
-			//don't show arterial road lables on the map
-			featureType: "road.arterial", 
-			elementType: "labels.icon", 
+			featureType: "road.local",
+			elementType: "labels.icon",
 			stylers: [
 				{visibility: "off"}
-			] 
+			]
+		},
+		{
+			//don't show arterial road lables on the map
+			featureType: "road.arterial",
+			elementType: "labels.icon",
+			stylers: [
+				{visibility: "off"}
+			]
 		},
 		{
 			//don't show road lables on the map
@@ -58,25 +58,25 @@ jQuery(document).ready(function($){
 			stylers: [
 				{visibility: "off"}
 			]
-		}, 
+		},
 		//style different elements on the map
-		{ 
-			featureType: "transit", 
-			elementType: "geometry.fill", 
+		{
+			featureType: "transit",
+			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-		}, 
+		},
 		{
 			featureType: "poi",
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -85,8 +85,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -95,8 +95,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -105,8 +105,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -115,8 +115,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -125,8 +125,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -135,8 +135,8 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -144,19 +144,19 @@ jQuery(document).ready(function($){
 			featureType: "landscape",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-			
+
 		},
 		{
 			featureType: "road",
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -165,23 +165,23 @@ jQuery(document).ready(function($){
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-		}, 
+		},
 		{
 			featureType: "water",
 			elementType: "geometry",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		}
 	];
-		
+
 	//set google map options
 	let mapOptions = {
       	center: new google.maps.LatLng(latitude, longitude),
@@ -199,7 +199,7 @@ jQuery(document).ready(function($){
 
 	//add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
-		//grap the zoom elements from the DOM and insert them in the map 
+		//grap the zoom elements from the DOM and insert them in the map
 	  	let controlUIzoomIn= document.getElementById('cd-zoom-in'),
 	  		controlUIzoomOut= document.getElementById('cd-zoom-out');
 	  	controlDiv.appendChild(controlUIzoomIn);
@@ -227,6 +227,3 @@ jQuery(document).ready(function($){
     };
 
 });
-
-
-  
