@@ -77,8 +77,11 @@ function CategoriesViewModel() {
             });
     };
 
+    self.initMapOptions = initMapOptions();
+
     /* Set the Map settings */
     self.initMap = function initMap() {
+
         let latitude = 30.0594838,
             longitude = 31.2234448,
             mapZoom = 10;
@@ -211,7 +214,7 @@ let category = function (data) {
 
 function startApp() {
   ko.applyBindings(new CategoriesViewModel());
-  
+
 }
 $(document).ready(function () {
 });

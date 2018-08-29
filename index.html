@@ -70,8 +70,8 @@
 
           <ul class="nav nav-sidebar" data-bind="foreach: categoryPlacesMarkers">
             <li class="category-place" data-bind="text: title, click: $parent.toggleBounce, value: id"></li>
-            <a href="" class="btn btn-sm btn-info likeBtn" data-bind="value: id, click: $parent.likePlace">
-              like
+            <a href="" data-bind="value: id, click: $parent.likePlace">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
             </a>
           </ul>
         </div>
@@ -106,11 +106,10 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg9HX3RjDw5V3hGkn98WwFOa_Vp8TVbNk&callback=startApp"></script>
 
-    <!-- Google Map Configuration -->
-    <script src="js/main.js"></script>
-
     <!-- Appliction Configuration -->
     <script src="js/CategoriesModelView.js"></script>
 
+    <!-- Google Map Configuration -->
+    <script src="js/main.js"></script>
   </body>
 </html>

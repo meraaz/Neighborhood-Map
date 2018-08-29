@@ -1,6 +1,7 @@
 let map;
 
-jQuery(document).ready(function($){
+function initMapOptions() {
+
 	//set your google maps parameters
 	let latitude = 30.0594838,
 		longitude = 31.2234448,
@@ -225,5 +226,4 @@ jQuery(document).ready(function($){
     window.googleMapError = function(){
         alert("An error while loading Google Maps occurred, Please try again later or Contact your Administrator.");
     };
-
-});
+}
